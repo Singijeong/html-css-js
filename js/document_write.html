@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <title>document write</title>
+    </head>
+    <body>
+        <h2>My First Web page</h2>
+        <p>My first paragraph</p>
+        <p>
+            Never call document. write after the document has finished loading. it will overwrite the whole document
+        </p>
+        <button type="button" onclick="document.write( 5 + 6 )">Try it</button>
+        <script>
+            document.write(5+6+12*6+123);
+        </script>
+    </body>
+</html>
