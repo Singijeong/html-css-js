@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initioal-scale=1.0">
+        <title>js StringAsObject</title>
+    </head>
+    <body>
+        <h2>javaScript String AS Object</h2>
+        
+        <p id = "demo1"></p>
+        <p id = "demo2"></p>
+        <p id = "demo3"></p>
+        <p id = "demo4"></p>
+        <p id = "demo5">Please visit Microsoft and Microsoft!</p>
+        <p id = "demo6">Hello World!</p>
+        <button onclick="textReplace()">Replace</button>
+        <button onclick="upperCase()">uppercase</button>
+        <button onclick="lowerCase()">uppercase</button>
+
+
+        <script>
+            let x = "John";
+            let y = new String("John");
+            let str = "Apple, Banana, Kiwi";
+            let part1 = str.slice(7,13);
+            let part2 = str.substring(7,13);
+            let part3 = str.substr(7,6);
+            let text = "Please visit Microsoft!";
+            let newtext = text.replace("Microsoft","W3Schools");
+            document.getElementById("demo1").innerHTML=typeof(x) + "<br>" + typeof(y);
+            document.getElementById("demo2").innerHTML=(x==y) + "<br>" + (x===y);
+            document.getElementById("demo3").innerHTML="part1: "+part1+"<br>"+"part2: "+part2+"<br>"+"part3: "+part3;
+            document.getElementById("demo4").innerHTML= "before: "+text+"<br>"+"after: "+newtext;
+            function textReplace(){
+                let text = document.getElementById("demo5").innerHTML;
+                document.getElementById("demo5").innerHTML=text.replace("Microsoft","W3Schools");
+            }
+            function upperCase(){
+                let text = document.getElementById("demo6").innerHTML
+                document.getElementById("demo6").innerHTML=text.toUpperCase();
+            }
+            function lowerCase(){
+                let text = document.getElementById("demo6").innerHTML
+                document.getElementById("demo6").innerHTML=text.toLowerCase();
+            }
+        </script>
+    </body>
+</html>
